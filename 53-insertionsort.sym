@@ -1,0 +1,51 @@
+__assert_fail (8.27.1) {0} void function  
+	 expr (8.27.21) {1} string variable param lval  0 
+	 file (8.27.34) {1} string variable param lval  1 
+	 line (8.27.47) {1} int variable param lval  2 
+	 func (8.27.57) {1} string variable param lval  3 
+
+putchar (8.28.1) {0} void function  
+	 c (8.28.15) {1} int variable param lval  0 
+
+putint (8.29.1) {0} void function  
+	 i (8.29.14) {1} int variable param lval  0 
+
+putstr (8.30.1) {0} void function  
+	 s (8.30.14) {1} string variable param lval  0 
+
+getchar (8.31.1) {0} int function  
+
+getword (8.32.1) {0} string function  
+
+getln (8.33.1) {0} string function  
+
+exit (8.34.1) {0} void function  
+	 status (8.34.12) {1} int variable param lval  0 
+
+strcmp (9.8.1) {0} int function  
+	 s1 (9.8.13) {1} string variable param lval  0 
+	 s2 (9.8.24) {1} string variable param lval  1 
+	 index (9.9.4) {2} int variable lval local  0 
+	 contin (9.10.4) {2} int variable lval local  1 
+	 s1c (9.11.4) {2} int variable lval local  2 
+	 s2c (9.12.4) {2} int variable lval local  3 
+	 cmp (9.13.4) {2} int variable lval local  4 
+
+insertion_sort (9.25.1) {0} void function  
+	 size (9.25.22) {1} int variable param lval  0 
+	 array (9.25.32) {1} string array variable param lval  1 
+	 sorted (9.26.4) {2} int variable lval local  0 
+	 slot (9.27.4) {2} int variable lval local  1 
+	 element (9.28.4) {2} string variable lval local  2 
+	 contin (9.29.4) {2} int variable lval local  3 
+
+print_array (9.49.1) {0} void function  
+	 label (9.49.19) {1} string variable param lval  0 
+	 size (9.49.33) {1} int variable param lval  1 
+	 array (9.49.43) {1} string array variable param lval  2 
+	 index (9.50.4) {2} int variable lval local  0 
+
+main (9.61.1) {0} int function  
+	 argc (9.61.11) {1} int variable param lval  0 
+	 argv (9.61.21) {1} string array variable param lval  1 
+

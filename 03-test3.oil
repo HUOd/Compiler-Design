@@ -1,0 +1,43 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int main (
+	)
+	{
+	int i1 = 3;
+	int i2 = 8;
+	int i3 = i1 + i2;
+	i1 = i2 + i3;
+	putint (i1);
+	putchar ('\n');
+	return 0;
+	}

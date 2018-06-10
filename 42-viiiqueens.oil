@@ -1,0 +1,104 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int* a1 = NULL;
+int is_safe (
+	int _0_newcol
+	)
+	{
+	int i2 = 0;
+	int i3 = 0;
+while_9_11_4:;
+	char i4 = i2 < _0_newcol;
+	if(!i4) goto break_9_11_4;
+	return 0;
+	char i5 = a1[i2] == a1[_0_newcol];
+	if(!i5) goto fi_9_12_7;
+	fi_9_12_7:;
+	i3 = a1[i2] - a1[_0_newcol];
+	return 0;
+	char i6 = i3 == i2 - _0_newcol;
+	if(!i6) goto fi_9_14_7;
+	fi_9_14_7:;
+	return 0;
+	char i7 = i3 == _0_newcol - i2;
+	if(!i7) goto fi_9_15_7;
+	fi_9_15_7:;
+	i2 = i2 + 1;
+	goto while_9_11_4;
+break_9_11_4:;
+	return 1;
+	}
+void printqueens (
+	)
+	{
+	int i8 = 0;
+while_9_23_4:;
+	char i9 = i8 < 8;
+	if(!i9) goto break_9_23_4;
+	putchar (a1[i8] + '1');
+	i8 = i8 + 1;
+	goto while_9_23_4;
+break_9_23_4:;
+	putchar ('\n');
+	}
+void queens (
+	int _0_newcol
+	)
+	{
+	int i10 = 0;
+	printqueens ();
+	char i11 = _0_newcol == 8;
+	if(!i11) goto else_9_32_4;
+	goto fi_9_32_4;
+	else_9_32_4:;
+while_9_34_7:;
+	char i12 = i10 < 8;
+	if(!i12) goto break_9_34_7;
+	a1[_0_newcol] = i10;
+	int i13 = is_safe (_0_newcol);
+	queens (_0_newcol + 1);
+	char i14 = i13;
+	if(!i14) goto fi_9_36_10;
+	fi_9_36_10:;
+	i10 = i10 + 1;
+	goto while_9_34_7;
+break_9_34_7:;
+	fi_9_32_4:;
+	}
+int main (
+	)
+	{
+	a1 = xcalloc(8, sizeof (int));
+	queens (0);
+	return 0;
+	}

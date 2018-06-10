@@ -1,0 +1,76 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int main (
+	)
+	{
+	int i1 = 2;
+	int i2 = 2;
+	char* s3 = xcalloc(100, sizeof (char*));
+while_9_13_4:;
+	char i4 = i2 < 100;
+	if(!i4) goto break_9_13_4;
+	s3[i2] = 1;
+	i2 = i2 + 1;
+	goto while_9_13_4;
+break_9_13_4:;
+while_9_18_4:;
+	char i5 = i1 < 100;
+	if(!i5) goto break_9_18_4;
+	char i6 = s3[i1];
+	if(!i6) goto fi_9_19_7;
+	i2 = i1 * 2;
+while_9_21_10:;
+	char i7 = i2 < 100;
+	if(!i7) goto break_9_21_10;
+	s3[i2] = 0;
+	i2 = i2 + i1;
+	goto while_9_21_10;
+break_9_21_10:;
+	fi_9_19_7:;
+	i1 = i1 + 1;
+	goto while_9_18_4;
+break_9_18_4:;
+	i2 = 2;
+while_9_30_4:;
+	char i8 = i2 < 100;
+	if(!i8) goto break_9_30_4;
+	char i9 = s3[i2];
+	if(!i9) goto fi_9_31_7;
+	putint (i2);
+	putchar ('\n');
+	fi_9_31_7:;
+	i2 = i2 + 1;
+	goto while_9_30_4;
+break_9_30_4:;
+	return 0;
+	}

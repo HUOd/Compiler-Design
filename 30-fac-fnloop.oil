@@ -1,0 +1,61 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int fac (
+	int _0_n
+	)
+	{
+	int i1 = 1;
+while_9_10_4:;
+	char i2 = _0_n > 1;
+	if(!i2) goto break_9_10_4;
+	i1 = i1 * _0_n;
+	_0_n = _0_n - 1;
+	goto while_9_10_4;
+break_9_10_4:;
+	return i1;
+	}
+int main (
+	)
+	{
+	int i3 = 1;
+while_9_19_4:;
+	char i4 = i3 <= 5;
+	if(!i4) goto break_9_19_4;
+	int i5 = fac (i3);
+	putint (i5);
+	putchar ('\n');
+	i3 = i3 + 1;
+	goto while_9_19_4;
+break_9_19_4:;
+	return 0;
+	}

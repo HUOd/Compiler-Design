@@ -1,0 +1,143 @@
+    ROOT "<<ROOT>>" (0.0.0) {0} 
+       PROTO ")" (8.27.68) {1} 
+          KW_VOID "void" (8.27.1) {0} 
+             DECLID "__assert_fail" (8.27.6) {0} void function 
+          PARAMS "(" (8.27.20) {1} 
+             KW_STRING "string" (8.27.21) {0} 
+                DECLID "expr" (8.27.28) {0} string variable param lval 
+             KW_STRING "string" (8.27.34) {0} 
+                DECLID "file" (8.27.41) {0} string variable param lval 
+             KW_INT "int" (8.27.47) {0} 
+                DECLID "line" (8.27.51) {0} int variable param lval 
+             KW_STRING "string" (8.27.57) {0} 
+                DECLID "func" (8.27.64) {0} string variable param lval 
+       PROTO ")" (8.28.20) {1} 
+          KW_VOID "void" (8.28.1) {0} 
+             DECLID "putchar" (8.28.6) {0} void function 
+          PARAMS "(" (8.28.14) {1} 
+             KW_INT "int" (8.28.15) {0} 
+                DECLID "c" (8.28.19) {0} int variable param lval 
+       PROTO ")" (8.29.19) {1} 
+          KW_VOID "void" (8.29.1) {0} 
+             DECLID "putint" (8.29.6) {0} void function 
+          PARAMS "(" (8.29.13) {1} 
+             KW_INT "int" (8.29.14) {0} 
+                DECLID "i" (8.29.18) {0} int variable param lval 
+       PROTO ")" (8.30.22) {1} 
+          KW_VOID "void" (8.30.1) {0} 
+             DECLID "putstr" (8.30.6) {0} void function 
+          PARAMS "(" (8.30.13) {1} 
+             KW_STRING "string" (8.30.14) {0} 
+                DECLID "s" (8.30.21) {0} string variable param lval 
+       PROTO ")" (8.31.13) {1} 
+          KW_INT "int" (8.31.1) {0} 
+             DECLID "getchar" (8.31.5) {0} int function 
+          PARAMS "(" (8.31.12) {1} 
+       PROTO ")" (8.32.16) {1} 
+          KW_STRING "string" (8.32.1) {0} 
+             DECLID "getword" (8.32.8) {0} string function 
+          PARAMS "(" (8.32.15) {1} 
+       PROTO ")" (8.33.14) {1} 
+          KW_STRING "string" (8.33.1) {0} 
+             DECLID "getln" (8.33.8) {0} string function 
+          PARAMS "(" (8.33.13) {1} 
+       PROTO ")" (8.34.22) {1} 
+          KW_VOID "void" (8.34.1) {0} 
+             DECLID "exit" (8.34.6) {0} void function 
+          PARAMS "(" (8.34.11) {1} 
+             KW_INT "int" (8.34.12) {0} 
+                DECLID "status" (8.34.16) {0} int variable param lval 
+       VARDECL "=" (9.9.17) {0} 
+          ARRAY "[]" (9.9.4) {0} 
+             KW_INT "int" (9.9.1) {0} 
+             DECLID "fibonacci" (9.9.7) {0} int array variable lval local 
+          KW_NULL "null" (9.9.19) {0} 
+       FUNCTION ")" (9.11.10) {1} 
+          KW_INT "int" (9.11.1) {0} 
+             DECLID "main" (9.11.5) {0} int function 
+          PARAMS "(" (9.11.9) {1} 
+          BLOCK "{" (9.11.12) {2} 
+             VARDECL "=" (9.12.14) {2} 
+                KW_INT "int" (9.12.4) {0} 
+                   DECLID "index" (9.12.8) {2} int variable lval local 
+                INTCON "2" (9.12.16) {2} int 
+             '=' "=" (9.13.14) {2} int array variable lval 
+                IDENT "fibonacci" (9.13.4) {2} int array variable lval 
+                KW_NEW "new" (9.13.16) {2} int array 
+                   KW_INT "int" (9.13.20) {2} int 
+                   ARRAY "[" (9.13.23) {2} 
+                   INTCON "30" (9.13.24) {2} int 
+             '=' "=" (9.14.17) {2} int variable lval 
+                INDEX "[" (9.14.13) {2} int variable lval 
+                   IDENT "fibonacci" (9.14.4) {2} int array variable lval 
+                   INTCON "0" (9.14.14) {2} int 
+                INTCON "0" (9.14.19) {2} int 
+             '=' "=" (9.15.17) {2} int variable lval 
+                INDEX "[" (9.15.13) {2} int variable lval 
+                   IDENT "fibonacci" (9.15.4) {2} int array variable lval 
+                   INTCON "1" (9.15.14) {2} int 
+                INTCON "1" (9.15.19) {2} int 
+             KW_WHILE "while" (9.17.4) {2} 
+                '<' "<" (9.17.17) {2} int 
+                   IDENT "index" (9.17.11) {2} int variable lval local 
+                   INTCON "30" (9.17.19) {2} int 
+                BLOCK "{" (9.17.23) {3} 
+                   '=' "=" (9.18.24) {3} int variable lval 
+                      INDEX "[" (9.18.16) {3} int variable lval 
+                         IDENT "fibonacci" (9.18.7) {3} int array variable lval 
+                         IDENT "index" (9.18.17) {3} int variable lval local 
+                      '+' "+" (9.18.47) {3} int variable lval 
+                         INDEX "[" (9.18.35) {3} int variable lval 
+                            IDENT "fibonacci" (9.18.26) {3} int array variable lval 
+                            '-' "-" (9.18.42) {3} int variable lval local 
+                               IDENT "index" (9.18.36) {3} int variable lval local 
+                               INTCON "1" (9.18.44) {3} int 
+                         INDEX "[" (9.18.58) {3} int variable lval 
+                            IDENT "fibonacci" (9.18.49) {3} int array variable lval 
+                            '-' "-" (9.18.65) {3} int variable lval local 
+                               IDENT "index" (9.18.59) {3} int variable lval local 
+                               INTCON "2" (9.18.67) {3} int 
+                   '=' "=" (9.19.13) {3} int variable lval local 
+                      IDENT "index" (9.19.7) {3} int variable lval local 
+                      '+' "+" (9.19.21) {3} int variable lval local 
+                         IDENT "index" (9.19.15) {3} int variable lval local 
+                         INTCON "1" (9.19.23) {3} int 
+             '=' "=" (9.22.10) {2} int variable lval local 
+                IDENT "index" (9.22.4) {2} int variable lval local 
+                INTCON "0" (9.22.12) {2} int 
+             CALL ")" (9.23.40) {2} void 
+                IDENT "putstr" (9.23.4) {2} void function variable lval 
+                '(' "(" (9.23.11) {2} 
+                   STRINGCON ""Numeri di figlio Bonacci\n"" (9.23.12) {2} string 
+             KW_WHILE "while" (9.24.4) {2} 
+                '<' "<" (9.24.17) {2} int 
+                   IDENT "index" (9.24.11) {2} int variable lval local 
+                   INTCON "30" (9.24.19) {2} int 
+                BLOCK "{" (9.24.23) {3} 
+                   CALL ")" (9.25.27) {3} void 
+                      IDENT "putstr" (9.25.7) {3} void function variable lval 
+                      '(' "(" (9.25.14) {3} 
+                         STRINGCON ""fibonacci["" (9.25.15) {3} string 
+                   CALL ")" (9.26.20) {3} void 
+                      IDENT "putint" (9.26.7) {3} void function variable lval 
+                      '(' "(" (9.26.14) {3} 
+                         IDENT "index" (9.26.15) {3} int variable lval local 
+                   CALL ")" (9.27.21) {3} void 
+                      IDENT "putstr" (9.27.7) {3} void function variable lval 
+                      '(' "(" (9.27.14) {3} 
+                         STRINGCON ""] = "" (9.27.15) {3} string 
+                   CALL ")" (9.28.31) {3} void 
+                      IDENT "putint" (9.28.7) {3} void function variable lval 
+                      '(' "(" (9.28.14) {3} 
+                         INDEX "[" (9.28.24) {3} int variable lval 
+                            IDENT "fibonacci" (9.28.15) {3} int array variable lval 
+                            IDENT "index" (9.28.25) {3} int variable lval local 
+                   CALL ")" (9.29.20) {3} void 
+                      IDENT "putchar" (9.29.7) {3} void function variable lval 
+                      '(' "(" (9.29.15) {3} 
+                         CHARCON "'\n'" (9.29.16) {3} int 
+                   '=' "=" (9.30.13) {3} int variable lval local 
+                      IDENT "index" (9.30.7) {3} int variable lval local 
+                      '+' "+" (9.30.21) {3} int variable lval local 
+                         IDENT "index" (9.30.15) {3} int variable lval local 
+                         INTCON "1" (9.30.23) {3} int 

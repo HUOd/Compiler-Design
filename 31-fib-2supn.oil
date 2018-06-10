@@ -1,0 +1,62 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int fibonacci (
+	int _0_n
+	)
+	{
+	return _0_n;
+	char i1 = _0_n < 2;
+	if(!i1) goto fi_9_9_4;
+	fi_9_9_4:;
+	int i2 = fibonacci (_0_n - 1);
+	int i3 = fibonacci (_0_n - 2);
+	return i2 + i3;
+	}
+int main (
+	)
+	{
+	int i4 = 0;
+while_9_15_4:;
+	char i5 = i4 < 10;
+	if(!i5) goto break_9_15_4;
+	putstr ("fibonacci(");
+	putint (i4);
+	putstr (") = ");
+	int i6 = fibonacci (i4);
+	putint (i6);
+	putchar ('\n');
+	i4 = i4 + 1;
+	goto while_9_15_4;
+break_9_15_4:;
+	return 0;
+	}

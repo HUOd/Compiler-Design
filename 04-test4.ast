@@ -1,0 +1,103 @@
+    ROOT "<<ROOT>>" (0.0.0) {0} 
+       PROTO ")" (8.27.68) {1} 
+          KW_VOID "void" (8.27.1) {0} 
+             DECLID "__assert_fail" (8.27.6) {0} void function 
+          PARAMS "(" (8.27.20) {1} 
+             KW_STRING "string" (8.27.21) {0} 
+                DECLID "expr" (8.27.28) {0} string variable param lval 
+             KW_STRING "string" (8.27.34) {0} 
+                DECLID "file" (8.27.41) {0} string variable param lval 
+             KW_INT "int" (8.27.47) {0} 
+                DECLID "line" (8.27.51) {0} int variable param lval 
+             KW_STRING "string" (8.27.57) {0} 
+                DECLID "func" (8.27.64) {0} string variable param lval 
+       PROTO ")" (8.28.20) {1} 
+          KW_VOID "void" (8.28.1) {0} 
+             DECLID "putchar" (8.28.6) {0} void function 
+          PARAMS "(" (8.28.14) {1} 
+             KW_INT "int" (8.28.15) {0} 
+                DECLID "c" (8.28.19) {0} int variable param lval 
+       PROTO ")" (8.29.19) {1} 
+          KW_VOID "void" (8.29.1) {0} 
+             DECLID "putint" (8.29.6) {0} void function 
+          PARAMS "(" (8.29.13) {1} 
+             KW_INT "int" (8.29.14) {0} 
+                DECLID "i" (8.29.18) {0} int variable param lval 
+       PROTO ")" (8.30.22) {1} 
+          KW_VOID "void" (8.30.1) {0} 
+             DECLID "putstr" (8.30.6) {0} void function 
+          PARAMS "(" (8.30.13) {1} 
+             KW_STRING "string" (8.30.14) {0} 
+                DECLID "s" (8.30.21) {0} string variable param lval 
+       PROTO ")" (8.31.13) {1} 
+          KW_INT "int" (8.31.1) {0} 
+             DECLID "getchar" (8.31.5) {0} int function 
+          PARAMS "(" (8.31.12) {1} 
+       PROTO ")" (8.32.16) {1} 
+          KW_STRING "string" (8.32.1) {0} 
+             DECLID "getword" (8.32.8) {0} string function 
+          PARAMS "(" (8.32.15) {1} 
+       PROTO ")" (8.33.14) {1} 
+          KW_STRING "string" (8.33.1) {0} 
+             DECLID "getln" (8.33.8) {0} string function 
+          PARAMS "(" (8.33.13) {1} 
+       PROTO ")" (8.34.22) {1} 
+          KW_VOID "void" (8.34.1) {0} 
+             DECLID "exit" (8.34.6) {0} void function 
+          PARAMS "(" (8.34.11) {1} 
+             KW_INT "int" (8.34.12) {0} 
+                DECLID "status" (8.34.16) {0} int variable param lval 
+       KW_STRUCT "struct" (9.5.1) {0} 
+          TYPEID "foo" (9.5.8) {0} struct foo typeid 
+          FIELDS "{" (9.5.12) {0} 
+             KW_INT "int" (9.6.4) {0} 
+                FIELD "a" (9.6.8) {0} int field 
+       FUNCTION ")" (9.9.10) {1} 
+          KW_INT "int" (9.9.1) {0} 
+             DECLID "main" (9.9.5) {0} int function 
+          PARAMS "(" (9.9.9) {1} 
+          BLOCK "{" (9.9.12) {2} 
+             VARDECL "=" (9.10.10) {2} 
+                KW_INT "int" (9.10.4) {0} 
+                   DECLID "a" (9.10.8) {2} int variable lval local 
+                INTCON "6" (9.10.12) {2} int 
+             VARDECL "=" (9.11.10) {2} 
+                TYPEID "foo" (9.11.4) {0} 
+                   DECLID "b" (9.11.8) {2} struct foo variable typeid lval local 
+                KW_NEW "new" (9.11.12) {2} struct foo typeid 
+                   TYPEID "foo" (9.11.16) {2} struct foo typeid 
+             '=' "=" (9.12.9) {2} int lval 
+                POINTER_GET "->" (9.12.5) {0} 
+                   IDENT "b" (9.12.4) {0} struct foo variable typeid lval local 
+                   IDENT "a" (9.12.7) {0} int lval 
+                INTCON "8" (9.12.11) {2} int 
+             '=' "=" (9.13.6) {2} int variable lval local 
+                IDENT "a" (9.13.4) {2} int variable lval local 
+                '+' "+" (9.13.17) {2} int variable lval local 
+                   '*' "*" (9.13.10) {2} int variable lval local 
+                      IDENT "a" (9.13.8) {2} int variable lval local 
+                      POINTER_GET "->" (9.13.13) {0} 
+                         IDENT "b" (9.13.12) {0} struct foo variable typeid lval local 
+                         IDENT "a" (9.13.15) {0} int lval 
+                   INTCON "6" (9.13.19) {2} int 
+             IDENT "putint" (9.14.4) {2} void function variable lval 
+             CALL ")" (9.14.13) {2} void 
+                IDENT "putint" (9.14.4) {2} void function variable lval 
+                '(' "(" (9.14.11) {2} 
+                   IDENT "a" (9.14.12) {2} int variable lval local 
+             CALL ")" (9.15.16) {2} void 
+                IDENT "putchar" (9.15.4) {2} void function variable lval 
+                '(' "(" (9.15.12) {2} 
+                   CHARCON "' '" (9.15.13) {2} int 
+             CALL ")" (9.16.16) {2} void 
+                IDENT "putint" (9.16.4) {2} void function variable lval 
+                '(' "(" (9.16.11) {2} 
+                   POINTER_GET "->" (9.16.13) {0} 
+                      IDENT "b" (9.16.12) {0} struct foo variable typeid lval local 
+                      IDENT "a" (9.16.15) {0} int lval 
+             CALL ")" (9.17.17) {2} void 
+                IDENT "putchar" (9.17.4) {2} void function variable lval 
+                '(' "(" (9.17.12) {2} 
+                   CHARCON "'\n'" (9.17.13) {2} int 
+             KW_RETURN "return" (9.18.4) {2} int 
+                INTCON "0" (9.18.11) {2} int 

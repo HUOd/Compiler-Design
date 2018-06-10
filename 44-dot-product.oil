@@ -1,0 +1,68 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+int dot_product (
+	int _0_size,
+	int* _0_vec1,
+	int* _0_vec2
+	)
+	{
+	int i1 = 0;
+	int i2 = 0;
+while_9_8_4:;
+	char i3 = i1 < _0_size;
+	if(!i3) goto break_9_8_4;
+	i2 = i2 + _0_vec1[i1] * _0_vec2[i1];
+	i1 = i1 + 1;
+	goto while_9_8_4;
+break_9_8_4:;
+	return i2;
+	}
+int main (
+	)
+	{
+	int* a4 = xcalloc(10, sizeof (int));
+	int* a5 = xcalloc(10, sizeof (int));
+	int i6 = 0;
+while_9_21_4:;
+	char i7 = i6 < 10;
+	if(!i7) goto break_9_21_4;
+	a4[i6] = i6 + 10;
+	a5[i6] = i6 * 10;
+	i6 = i6 + 1;
+	goto while_9_21_4;
+break_9_21_4:;
+	int i8 = dot_product (10, a4, a5);
+	putint (i8);
+	putchar ('\n');
+	return 0;
+	}

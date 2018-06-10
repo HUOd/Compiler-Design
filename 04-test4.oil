@@ -1,0 +1,49 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+struct foo { 
+	int foo__int_a;
+};
+
+int main (
+	)
+	{
+	int i1 = 6;
+	struct foo* p2 = xcalloc(1, sizeof (struct foo));
+	p2->foo__int_a = 8;
+	i1 = i1 * p2->foo__int_a + 6;
+	putint (i1);
+	putchar (' ');
+	putint (p2->foo__int_a);
+	putchar ('\n');
+	return 0;
+	}

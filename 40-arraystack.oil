@@ -1,0 +1,107 @@
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+struct stack { 
+	char** stack__string_array_data;
+	int stack__int_size;
+	int stack__int_top;
+};
+
+struct stack* new_stack (
+	int _0_size
+	)
+	{
+	struct stack* p1 = xcalloc(1, sizeof (struct stack));
+	p1->stack__string_array_data = xcalloc(_0_size, sizeof (char*));
+	p1->stack__int_size = _0_size;
+	p1->stack__int_top = -1;
+	return p1;
+	}
+void push (
+	struct stack* _0_stack,
+	string _0_str
+	)
+	{
+	_0_stack->stack__int_top = _0_stack->stack__int_top + 1;
+	_0_stack->stack__string_array_data[_0_stack->stack__int_top] = _0_str;
+	}
+	{
+	char i2 = !_0_stack->stack__int_top < _0_stack->stack__int_size - 1;
+	if(!i2) goto fi_9_22_6;
+	__assert_fail ("stack->top < stack->size - 1", "40-arraystack.oc", 22, __FUNC__);
+	fi_9_22_6:;
+	}
+char* pop (
+	struct stack* _0_stack
+	)
+	{
+	char* s3 = _0_stack->stack__string_array_data[_0_stack->stack__int_top];
+	_0_stack->stack__int_top = _0_stack->stack__int_top - 1;
+	return s3;
+	}
+	{
+	char i4 = !_0_stack->stack__int_top != -1;
+	if(!i4) goto fi_9_29_6;
+	__assert_fail ("stack->top != EMPTY", "40-arraystack.oc", 29, __FUNC__);
+	fi_9_29_6:;
+	}
+int empty (
+	struct stack* _0_stack
+	)
+	{
+	return _0_stack->stack__int_top == -1;
+	}
+int main (
+	int _0_argc,
+	char** _0_argv
+	)
+	{
+	 = new_stack (100);
+	struct stack* p6 = p5;
+	int i7 = 0;
+while_9_42_4:;
+	char i8 = i7 < _0_argc;
+	if(!i8) goto break_9_42_4;
+	push (p6, _0_argv[i7]);
+	i7 = i7 + 1;
+	goto while_9_42_4;
+break_9_42_4:;
+	int i9 = empty (p6);
+while_9_47_4:;
+	char i10 = !i9;
+	if(!i10) goto break_9_47_4;
+	 = pop (p6);
+	putstr (s11);
+	putchar ('\n');
+	goto while_9_47_4;
+break_9_47_4:;
+	}

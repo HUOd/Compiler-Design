@@ -1,0 +1,125 @@
+#define __OCLIB_C__
+#include "oclib.oh"
+
+void __assert_fail (
+	string _0_expr,
+	string _0_file,
+	int _0_line,
+	string _0_func
+	);
+
+void putchar (
+	int _0_c
+	);
+
+void putint (
+	int _0_i
+	);
+
+void putstr (
+	string _0_s
+	);
+
+int getchar (
+	);
+
+char* getword (
+	);
+
+char* getln (
+	);
+
+void exit (
+	int _0_status
+	);
+
+struct node { 
+	char* node__string_data;
+	struct node * node_node_pointer_link;
+};
+
+struct stack { 
+	struct node * stack_node_pointer_top;
+};
+
+int empty (
+	struct stack* _0_stack
+	)
+	{
+	return _0_stack->stack_node_pointer_top == NULL;
+	}
+	{
+	char i1 = !_0_stack != NULL;
+	if(!i1) goto fi_9_15_6;
+	__assert_fail ("stack != null", "41-linkedstack.oc", 15, __FUNC__);
+	fi_9_15_6:;
+	}
+struct stack* new_stack (
+	)
+	{
+	struct stack* p2 = xcalloc(1, sizeof (struct stack));
+	p2->stack_node_pointer_top = NULL;
+	return p2;
+	}
+void push (
+	struct stack* _0_stack,
+	string _0_str
+	)
+	{
+	struct node* p3 = xcalloc(1, sizeof (struct node));
+	p3->node__string_data = _0_str;
+	p3->node_node_pointer_link = _0_stack->stack_node_pointer_top;
+	_0_stack->stack_node_pointer_top = p3;
+	}
+	{
+	char i4 = !_0_stack != NULL;
+	if(!i4) goto fi_9_27_6;
+	__assert_fail ("stack != null", "41-linkedstack.oc", 27, __FUNC__);
+	fi_9_27_6:;
+	}
+char* pop (
+	struct stack* _0_stack
+	)
+	{
+	char* s5 = _0_stack->stack_node_pointer_top->node__string_data;
+	_0_stack->stack_node_pointer_top = _0_stack->stack_node_pointer_top->node_node_pointer_link;
+	return s5;
+	}
+	{
+	char i6 = !_0_stack != NULL;
+	if(!i6) goto fi_9_35_6;
+	__assert_fail ("stack != null", "41-linkedstack.oc", 35, __FUNC__);
+	fi_9_35_6:;
+	}
+	{
+	int i7 = empty (_0_stack);
+	char i8 = !!i7;
+	if(!i8) goto fi_9_36_6;
+	__assert_fail ("not empty (stack)", "41-linkedstack.oc", 36, __FUNC__);
+	fi_9_36_6:;
+	}
+int main (
+	int _0_argc,
+	char** _0_argv
+	)
+	{
+	struct stack* p9 = ;
+	int i10 = 0;
+while_9_45_4:;
+	char i11 = i10 < _0_argc;
+	if(!i11) goto break_9_45_4;
+	push (p9, _0_argv[i10]);
+	i10 = i10 + 1;
+	goto while_9_45_4;
+break_9_45_4:;
+	int i12 = empty (p9);
+while_9_50_4:;
+	char i13 = !i12;
+	if(!i13) goto break_9_50_4;
+	 = pop (p9);
+	putstr (s14);
+	putchar ('\n');
+	goto while_9_50_4;
+break_9_50_4:;
+	return 0;
+	}
